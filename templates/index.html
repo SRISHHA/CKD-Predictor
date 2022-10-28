@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronic Kidney Predictor</title>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body style="background-color:rgb(0, 0, 0);">
+
+  <div class="header">
+    <h1>CKD Predictor</h1>
+  </div>
+
+  <br>
+   <br>
+
+   <form action="{{ url_for('predict')}}"method="post">
+       <input type="text" name='Haemoglobin' placeholder="Haemoglobin" required="required" />
+       <br>
+        <input type="text" name="Specific_Gravity" placeholder="Specific_Gravity" required="required" />
+        <br>
+      <input type="text" name="Red_Blood_Cell_Count" placeholder="Red_Blood_Cell_Count" required="required" />
+      <br>
+        <input type="text" name="Albumin" placeholder="Albumin" required="required" />
+        <br>
+        <input type="text" name="Blood_Urea" placeholder="Blood_Urea" required="required" />
+        <br>
+      <input type="text" name="Blood_Pressure" placeholder="Blood_Pressure" required="required" />
+      <br>
+      <input type="text" name="Blood_Gulcose_Random" placeholder="Blood_Gulcose_Random" required="required" />
+      <br>
+      <input type="text" name="Serum_Creatinine" placeholder="Serum_Creatinine" required="required" />
+      <br>
+<br>
+       <br>
+       <button type="submit" class="btn btn-success btn-block btn-large">P R E D I C T</button>
+
+
+   </form>
+       <br>
+   <br>
+
+</div>
+</body>
+
+ 
+</html>
+<style>
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+ 
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #181818;
+  color: white;
+  font-size: 20px;
+}
+form { 
+margin: 0 auto; 
+width:250px;
+text-align: center;
+}
+</style>
